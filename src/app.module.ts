@@ -174,6 +174,7 @@ export class AppModule implements NestModule {
         { path: 'metrics', method: RequestMethod.ALL },
         { path: 'profiling', method: RequestMethod.ALL },
         { path: 'profiling/data', method: RequestMethod.ALL },
+        { path: 'health', method: RequestMethod.ALL },
       )
       .forRoutes({ path: '*path', method: RequestMethod.ALL });
   }
