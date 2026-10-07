@@ -21,7 +21,7 @@ async function bootstrap() {
 
   app.enableCors();
   app.setGlobalPrefix('api/v1', {
-    exclude: ['metrics', 'profiling', 'profiling/data'],
+    exclude: ['metrics', 'profiling', 'profiling/data', 'health'],
   });
   app.useGlobalPipes(new ValidationPipe());
   app.useGlobalInterceptors(new EncryptInterceptor());
