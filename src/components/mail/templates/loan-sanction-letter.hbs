@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <table style="width: 100%; float: left; line-height: 30px; border: 5px solid #0000000d;padding: 0px 10px;" border="0">
+    <tr>
+      <td><img src="{{SERVER_DOMAIN_NAME_HEADER}}" style="width: 100%;"></td>
+    </tr>
+
+    <tr>
+      <td style="background-color: #ffe6e6; border: 1px solid #ff4d4f; border-radius: 6px; padding: 14px; font-family: Arial, sans-serif;">
+        <span style="font-size: 18px; margin-right: 8px;">⚠️</span>
+        <b>Note:</b> {{COMPANY_NAME}} accepts payments only through official channels and is not responsible for
+        payments made to unauthorized accounts or persons.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <h1 style="text-align:center">LOAN SANCTION LETTER</h1>
+        <p></p>
+        Date: {{createdDate}}
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <b>Dear {{name}},</b>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Thank you for selecting {{COMPANY_NAME}} for your loan requirements.
+      We appreciate the trust you have placed in us to assist you.<br/>
+        We are pleased to inform you that your loan application has been approved successfully.
+        Kindly take some time to review the loan terms and repayment conditions provided.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+      <table border="1" style="width:100%;text-align: center;border-collapse: collapse;padding: 12px;line-height: 25px;">
+          <tr>
+            <td><b>S.NO.</b></td>
+            <td><b>PARAMETERS</b></td>
+            <td><b>DETAILS</b></td>
+          </tr>
+
+        <tr><td>1</td><td style="text-align:left;">Name</td><td>{{name}}</td></tr>
+        <tr><td>2</td><td style="text-align:left;">Loan amount</td><td>{{loanAmtApproved}}</td></tr>
+        <tr><td>3</td><td style="text-align:left;">ROI (in % per day)</td><td>{{roi}}%</td></tr>
+        <tr><td>4</td><td style="text-align:left;">Total interest charge during tenure</td><td>{{intem}}</td></tr>
+        <tr><td>5</td><td style="text-align:left;">Processing Fee</td><td>{{adminFee}}</td></tr>
+        <tr><td>6</td><td style="text-align:left;">GST 18%</td><td>{{gst}}</td></tr>
+        <tr><td>7</td><td style="text-align:left;">Insurance charges</td><td>Nil</td></tr>
+        <tr><td>8</td><td style="text-align:left;">Others (if any)</td><td>Nil</td></tr>
+        <tr><td>9</td><td style="text-align:left;">Net disbursed amount</td><td>{{fdb}}</td></tr>
+        <tr><td>10</td><td style="text-align:left;">Total Repayment Amount</td><td>{{rep1}}</td></tr>
+        <tr><td></td><td style="text-align:left;">Repayment Date</td><td>{{repayDate}}</td></tr>
+        <tr><td>11</td><td style="text-align:left;">Annualized interest rate</td><td>365</td></tr>
+        <tr><td>12</td><td style="text-align:left;">Tenure of the Loan (days)</td><td>{{tenure}} days</td></tr>
+        <tr><td>13</td><td style="text-align:left;">Repayment frequency</td><td>Day</td></tr>
+        <tr><td>14</td><td style="text-align:left;">Number of installments</td><td>1</td></tr>
+        <tr><td>15</td><td style="text-align:left;">Amount of each installment</td><td>{{rep1}}</td></tr>
+
+        <tr><td colspan="3" style="text-align:left;"><b>Details about Contingent Charges</b></td></tr>
+          <tr>
+            <td>16</td>
+            <td style="text-align:left;">Penal charges for delay</td>
+            <td>{{penalintrest}} Delay Penal Interest Per Day & Rs {{penalCharges}} Penalty Over On Delay Period</td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td style="text-align:left;">Cooling off period</td>
+            <td>1 Day</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    {{!-- {{#if account_detail}}
+    <tr>
+      <td>
+        <b>Your Bank Account Details:</b>
+        <ul>
+          <li>Bank Name: {{account_detail.bank}}</li>
+          <li>Account No: {{account_detail.accountNo}}</li>
+          <li>IFSC Code: {{account_detail.bankIfsc}}</li>
+        </ul>
+      </td>
+    </tr>
+    {{/if}} --}}
+
+    <tr>
+      <td>
+        <b>1. Loan Details:</b>
+        <ul>
+          <li>Amount: ₹ {{loanAmtApproved}}</li>
+          <li>Tenure: {{tenure}} days</li>
+          <li>Product: Pay Day Loan</li>
+          <li>Rate of Interest: {{roi}}% per day</li>
+          <li>Repay Date: {{repayDate}}</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <b>2. Interest Calculation and Payment:</b>
+        <ul>
+          <li>Interest will be charged from the date of disbursal until the payment date.</li>
+          <li>You must repay the loan amount with accrued interest before due date.</li>
+          <li>The repayment should be credited by {{repayDate}}.</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <td><img src="{{SERVER_DOMAIN_NAME_FOOTER}}" style="width: 100%;"></td>
+    </tr>
+  </table>
+
+  <!-- SECOND PAGE -->
+
+<table style="width: 100%; float: left;  line-height: 30px;  border: 5px solid #0000000d;padding: 0px 10px;" border="0">
+    <tr>
+      <td><img src="{{SERVER_DOMAIN_NAME_HEADER}}" style="width: 100%;"></td>
+    </tr>
+
+  <tr><td><b>4. Prepayment Option:</b> You can prepay anytime without charges.</td></tr>
+  <tr><td><b>5. Disbursement Process:</b> The loan will be disbursed to your registered bank account.</td></tr>
+  <tr><td><b>6. Collateral and Security:</b> This loan is unsecured.</td></tr>
+  <tr><td><b>7. Communication:</b> Updates will be sent to your registered contact details.</td></tr>
+  <tr><td><b>8. Privacy:</b> Your data is secure as per data protection laws.</td></tr>
+  <tr><td><b>9. Default Consequences:</b> Defaults may attract penalties and affect credit score.</td></tr>
+  <tr><td><b>10. Legal Jurisdiction:</b> New Delhi, governed by the laws of Delhi.</td></tr>
+    <tr>
+      <td>
+        <b>11. Customer Support:</b>
+        For queries, contact us at {{company_mobile_no}}.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        We genuinely appreciate your trust in {{nbfc_name_show}} as your financial partner.
+        By accepting this loan, you acknowledge and agree to these terms.
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding: 10px 0;">
+
+        <div style=" background-color: #ffe6e6; border: 1px solid #ff4d4f; border-radius: 6px; padding: 14px; font-family: Arial, sans-serif; ">
+
+          <div style=" display: flex; align-items: center; margin-bottom: 8px; ">
+            <span style="font-size: 18px; margin-right: 8px;">⚠️</span>
+            <span style=" color: #d32f2f; font-weight: bold; font-size: 15px; ">
+              Important: Fraud Prevention Notice
+            </span>
+          </div>
+
+          <ul style=" margin: 0; padding-left: 20px; color: #333; font-size: 14px; line-height: 1.5; ">
+            <li>{{COMPANY_NAME}} accepts repayments only through official company channels and authorized bank accounts.
+            </li>
+            <li>The company never asks for payments to personal accounts, UPI IDs, wallets, or unofficial
+              numbers/emails.</li>
+            <li>Please verify all payment requests through official customer care.</li>
+            <li>{{COMPANY_NAME}} is not responsible for payments made to unauthorized persons or channels.</li>
+          </ul>
+
+        </div>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p>Warm regards,</p>
+        <p>{{COMPANY_NAME}} (A Unit of {{nbfc_name_show}})</p>
+        <img src="{{server_domain_name}}/images/sign.png" style="width: 100px;">
+      </td>
+    </tr>
+
+    <tr>
+      <td><img src="{{SERVER_DOMAIN_NAME_FOOTER}}" style="width: 100%;"></td>
+    </tr>
+  </table>
+</body>
+</html>

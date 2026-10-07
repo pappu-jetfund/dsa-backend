@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <table
+      style="width: 100%; float: left; border: 5px solid #0000000d; padding: 0px 10px;"
+      border="0"
+    >
+      <tr>
+        <td>
+          <img
+           src="{{SERVER_DOMAIN_NAME_HEADER}}" style="width: 100%;"
+          />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <h1 style="text-align:center">DISBURSAL LETTER</h1>
+
+          <p>Dear {{name}},</p>
+
+          <p>Loan Number: {{loanNo}}</p>
+
+          <p>
+            Your loan for Rs {{disbursalAmount}} is disbursed
+          </p>
+
+          <p>
+            We are pleased to have disbursed a loan for Rs.
+            {{disbursalAmount}}
+            @ {{roi}}% interest per day for a period of
+            {{tenure}} days on the terms and conditions agreed by you.
+          </p>
+
+          <p>
+            Your repayment amount is Rs. {{repayment}}
+          </p>
+
+          <p>
+            Repaying this loan on time will keep your record straight, not only
+            with us but also in the Bureaus. We are always there with you, and
+            you can take another loan from us immediately after repayment.
+          </p>
+
+          <p>Best regards,</p>
+          <p>Team {{COMPANY_NAME}}</p>
+        </td>
+      </tr>
+
+      <tr>
+         <td><img src="{{SERVER_DOMAIN_NAME_FOOTER}}" style="width: 100%;"></td>
+      </tr>
+    </table>
+  </body>
+</html>

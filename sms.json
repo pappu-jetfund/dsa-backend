@@ -1,0 +1,44 @@
+{
+
+   "localhost": {
+    "template_id":"1707176795027959535",
+    "message": "Dear {{name}}, your loan application is approved. Complete video KYC through our portal to receive loan amount {{portal_url}}. Thanks, Wallstreet",
+    "variables": ["name", "portal_url"]
+   },
+  "lms.speedoloan.com": {
+    "template_id":"1707175464225200828",
+    "message": "Dear {{name}},\nWe're pleased to inform you that your loan application has been approved. To proceed and receive the loan amount, please complete a short video KYC through our portal: {{portal_url}}\n\nThank you,\nSpeedoloan Team",
+    "variables": ["name", "portal_url"]
+  },
+   "lms.shreeloan.com": {
+      "template_id":"1707175464225200828",
+    "message": "Dear {{name}},\nWe're pleased to inform you that your loan application has been approved. To proceed and receive the loan amount, please complete a short video KYC through our portal: {{portal_url}}\n\nThank you,\nSpeedoloan Team",
+    "variables": ["name", "portal_url"]
+  },
+   "lms.rupyalelo.com": {
+      "template_id":"1707175464225200828",
+    "message": "Dear {{name}},\nWe're pleased to inform you that your loan application has been approved. To proceed and receive the loan amount, please complete a short video KYC through our portal: {{portal_url}}\n\nThank you,\nSpeedoloan Team",
+    "variables": ["name", "portal_url"]
+  },
+  "lms.salaryanytime.com":{
+     "template_id":"1707176673952888788",
+    "message":"Dear {name}, We're pleased to inform you that your loan application has been approved. To proceed and receive the loan amount, please complete a short video KYC through our portal: {portal_url} Thank you, Focus Capital Team",
+    "variables": ["name", "portal_url"]
+  },
+  "lms.wallstreetfinz.com":{
+     "template_id":"1707176795027959535",
+    "message":"Dear {{name}}, your loan application is approved. Complete video KYC through our portal to receive loan amount {{portal_url}}. Thanks, Wallstreet",
+    "variables": ["name", "portal_url"]
+  },
+   "lms.rupee4u.com":{
+     "template_id":"1707177020289304398",
+    "message":"Dear {{name}}, We're pleased to inform you that your loan application has been approved. To proceed and receive the loan amount, please complete a short video KYC through our portal: {{portal_url}} Thank you, Rupee4u",
+    "variables": ["name", "portal_url"]
+  },
+   "lms.cashmysalary.com": {
+    "template_id":"1707175464225200828",
+    "message": "Dear {{name}},\nWe're pleased to inform you that your loan application has been approved. To proceed and receive the loan amount, please complete a short video KYC through our portal: {{portal_url}}\n\nThank you,\nCashmysalary Team",
+    "variables": ["name", "portal_url"]
+  }
+ 
+}

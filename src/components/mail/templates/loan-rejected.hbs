@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+<table style="width: 100%; float: left; border: 5px solid #0000000d; padding: 0px 10px;" border="0">
+  <tr>
+    <td>
+     <img src="{{SERVER_DOMAIN_NAME_HEADER}}" style="width: 100%;">
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <h1 style="text-align:center">Application Rejected</h1>
+
+      <p>Dear {{name}},</p>
+
+      <p>
+        You had applied for a loan for Rs.{{loanRequired}} and unfortunately we couldn&#39;t serve your requirement at this time.
+      </p>
+
+      <p>
+        However, being a dynamic organization, our policies keep changing from time to time and hence next time you require a loan, after a month or two, you may just reply to this mail and we will connect with you immediately.
+      </p>
+
+      <p>Best regards,</p>
+      <p>Team {{company_name}}</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+     <img src="{{SERVER_DOMAIN_NAME_FOOTER}}" style="width: 100%;">
+    </td>
+  </tr>
+</table>
+</body>
+</html>

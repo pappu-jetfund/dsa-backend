@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <table style="width: 100%; float: left; border: 5px solid #0000000d; padding: 0px 10px;" border="0">
+      <tr>
+        <td>
+          <img src="{{SERVER_DOMAIN_NAME_HEADER}}" style="width: 100%;">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <h1 style="text-align:center">NO DUES CERTIFICATE</h1>
+
+          <p>Date : {{formattedDate}}</p>
+
+          <p>Loan Number: {{loanNo}}</p>
+
+          <p>Dear {{customerName}},</p>
+
+          <p>
+            This is to certify that {{customerName}}, who had taken a short-term loan from
+            {{company_name}} for Rs {{disbursalAmount}} on {{disbursalDate}}
+            has repaid its full amount on {{collectedDate}}.
+          </p>
+
+          <p>
+            This is the full amount which was due from {{customerName}}, including interest.
+          </p>
+
+          <p>
+            Hence, there are no more dues from {{company_name}} against the loan taken by
+            {{customerName}}.
+          </p>
+
+          <p><strong>&nbsp;</strong></p>
+
+          <p>Best regards,</p>
+          <p>Team {{company_name}}</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img src="{{SERVER_DOMAIN_NAME_FOOTER}}" style="width: 100%;">
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
