@@ -6,7 +6,6 @@ import * as ExcelJS from 'exceljs';
 import { Response } from 'express';
 import { CardCompleted } from '../../../common/config/customer-journey.config';
 import { buildJourney, getJourneyConfig, resolveBankRequired } from '../../../utility/notonboarded.customer-journey.util';
-import { SmsService } from '../../sms/sms.service';
 
 interface DomainConfig {
     brand: string;
@@ -19,7 +18,6 @@ export class ReportsService {
     constructor(
         private readonly tenantPrisma: TenantPrismaService,
         private readonly clsService: ClsService,
-        private readonly smsService: SmsService,
     ) { }
 
     private getDatesBetween(startDate: string, endDate: string): string[] {
@@ -401,7 +399,7 @@ export class ReportsService {
         let lastId: number | null = null;
         let finalData: any[] = [];
 
-        const domain = await this.smsService.getCurrentDomain(req);
+        const domain = (req.headers['x-tenant-domain'] || req.headers['origin'] || 'unknown') as string;
         const journeyConfig = getJourneyConfig(domain);
 
         while (true) {
