@@ -13,7 +13,6 @@ import { TenantMiddleware } from './middleware/database.middleware';
 import { ClsModule } from 'nestjs-cls';
 import { TenantModule } from './tenant/tenant.module';
 import { VendorsModule } from './components/dsa/vendors/vendors.module';
-import { DsaCustomerModule } from './components/dsa/customer/customer.module';
 import { DsaAuthModule } from './components/dsa/auth/auth.module';
 import { CampaignsModule } from './components/dsa/campaign/campaigns.module';
 import { APP_GUARD } from '@nestjs/core';
@@ -61,7 +60,6 @@ import { FailureLogService } from './components/logs-api/failure-log.service';
     DsaAuthModule,
     DsaReportsModule,
     CampaignsModule,
-    DsaCustomerModule,
     RolesModule,
     MonitoringModule,
   ],
