@@ -6,26 +6,10 @@
     "deleteOutDir": true,
     "assets": [
       {
-        "include": "**/leadsConfig.json",  
-        "outDir": "dist"
-      },
-      {
-        "include": "**/sms.json",
-        "outDir": "dist"
-      },
-       {
         "include": "**/*.hbs",
-        "outDir": "dist/src"
-      },
-       {
-        "include": "../models/**/**",
-        "outDir": "dist/models"
-      },
-      {
-        "include": "**/due_sms.json",
         "outDir": "dist"
       }
     ],
-     "watchAssets": false
+    "watchAssets": false
   }
 }
